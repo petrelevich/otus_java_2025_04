@@ -38,7 +38,9 @@ public class ReflectionMethod {
         System.out.println("isStatic:" + Modifier.isStatic(modifiers));
 
         System.out.println("--- execution:");
-        var result = method.invoke(new DemoClass("demoVal"));
+        var obj = new DemoClass("demoVal");
+        var result = method.invoke(obj);
+        // Вместо: obj.toString()
         System.out.println("result:" + result);
     }
 }
