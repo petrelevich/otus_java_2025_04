@@ -59,7 +59,9 @@ public class MapReduceExample {
     static <R> Collection<R> filter(List<R> src, Predicate<R> pred) {
         List<R> r = new ArrayList<>();
         for (R t : src) {
-            if (pred.test(t)) r.add(t);
+            if (pred.test(t)) {
+                r.add(t);
+            }
         }
         return r;
     }
