@@ -60,10 +60,8 @@ public class JavaxJsonDemo {
                 JsonNumber num = (JsonNumber) tree;
                 logger.info("NUMBER {}", num);
             }
-            case TRUE, FALSE, NULL -> logger.atInfo()
-                    .setMessage("{}")
-                    .addArgument(tree::getValueType)
-                    .log();
+            case TRUE, FALSE, NULL ->
+                logger.atInfo().setMessage("{}").addArgument(tree::getValueType).log();
             default -> throw new IllegalStateException("Unexpected value: " + tree.getValueType());
         }
     }

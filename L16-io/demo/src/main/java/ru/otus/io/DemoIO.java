@@ -27,11 +27,10 @@ public class DemoIO {
                 .log();
         var demoIO = new DemoIO();
         demoIO.zipFile("textFile.txt");
-        //   demoIO.writeObject("person.bin");
-        // demoIO.readObject("person.bin");
-        //  demoIO.writeTextFile("textFile.txt");
-        //  demoIO.readTextFile("textFile.txt");
-
+        //demoIO.writeObject("person.bin");
+        //demoIO.readObject("person.bin");
+        //demoIO.writeTextFile("textFile.txt");
+        //demoIO.readTextFile("textFile.txt");
     }
 
     // Обратите внимание на цепочку декораторов
