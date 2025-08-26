@@ -28,7 +28,7 @@ class ClientRestControllerStandaloneTest {
     private ClientService clientService;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         mvc = MockMvcBuilders.standaloneSetup(new ClientRestController(clientService))
                 .build();
     }
