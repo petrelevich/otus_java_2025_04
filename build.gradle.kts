@@ -52,6 +52,8 @@ allprojects {
     val springDocOpenapiUi: String by project
     val jsr305: String by project
 
+    val grpc: String by project
+
     apply(plugin = "io.spring.dependency-management")
     dependencyManagement {
         dependencies {
@@ -69,7 +71,7 @@ allprojects {
             dependency("com.google.j2objc:j2objc-annotations:$j2objcAnnotations")
             dependency("org.redisson:redisson:$redisson")
 
-	        dependency("org.eclipse.jetty.ee10:jetty-ee10-servlet:$jetty")
+            dependency("org.eclipse.jetty.ee10:jetty-ee10-servlet:$jetty")
             dependency("org.eclipse.jetty:jetty-server:$jetty")
             dependency("org.eclipse.jetty.ee10:jetty-ee10-webapp:$jetty")
             dependency("org.eclipse.jetty:jetty-security:$jetty")
@@ -78,7 +80,7 @@ allprojects {
             dependency("org.eclipse.jetty:jetty-util:$jetty")
             dependency("org.freemarker:freemarker:$freemarker")
 
-	        dependency("org.reflections:reflections:$reflections")
+            dependency("org.reflections:reflections:$reflections")
 
             dependency("org.webjars:sockjs-client:$sockjs")
             dependency("org.webjars:stomp-websocket:$stomp")
@@ -86,6 +88,10 @@ allprojects {
             dependency("org.springdoc:springdoc-openapi-starter-webmvc-ui:$springDocOpenapiUi")
 
             dependency("com.google.code.findbugs:jsr305:$jsr305")
+
+            dependency("io.grpc:grpc-netty:$grpc")
+            dependency("io.grpc:grpc-protobuf:$grpc")
+            dependency("io.grpc:grpc-stub:$grpc")
         }
     }
 
